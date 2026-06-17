@@ -1,115 +1,129 @@
-# Sathwika Dommata – Developer Portfolio
+# Sathwika Reddy — Professional Portfolio Website
 
-A clean, responsive, and professional portfolio website built with plain HTML, CSS, and JavaScript.
+A modern, fully responsive personal portfolio website built with HTML5, CSS3, and vanilla JavaScript.
 
 **Live Site:** _Add your deployment URL here_
 
 ---
 
-## About
-
-This portfolio was built as **Task 1** of the [Future Interns](https://futureinterns.com) Full Stack Web Development internship. It showcases real skills, projects, education, and contact information for Dommata Sathwika — B.Tech IT student at Joginpally B.R. Engineering College, Hyderabad.
-
----
-
 ## Features
 
-- Animated typewriter hero with rotating roles
-- Smooth scroll-triggered reveal animations
-- Responsive design (mobile, tablet, desktop)
-- Sticky navbar with scroll-aware styling
-- Skills, education, and certifications sections
-- Project showcase cards
-- Functional contact form (opens the user's email client)
-- SEO meta tags
-- Reduced-motion support (`prefers-reduced-motion`)
+| Feature | Status |
+|---|---|
+| Responsive design (mobile, tablet, desktop) | ✅ |
+| Dark / Light mode toggle (saved to localStorage) | ✅ |
+| Loading screen with animated progress bar | ✅ |
+| Interactive floating particle background | ✅ |
+| Animated typewriter hero | ✅ |
+| Scroll-triggered reveal animations (AOS) | ✅ |
+| Active nav link scroll spy | ✅ |
+| Animated counters (CGPA, Projects, Certs) | ✅ |
+| Animated skill progress bars | ✅ |
+| Project cards with hover overlay & links | ✅ |
+| Certifications section with status badges | ✅ |
+| Achievements & activities section | ✅ |
+| Resume preview + download button | ✅ |
+| Contact form with validation & success state | ✅ |
+| Social media links (LinkedIn, GitHub, Instagram) | ✅ |
+| Back-to-top button | ✅ |
+| SEO meta tags | ✅ |
+| Accessibility (aria-labels, reduced-motion) | ✅ |
 
 ---
 
 ## Tech Stack
 
-| Layer    | Technology                     |
-|----------|-------------------------------|
-| Markup   | HTML5                          |
-| Styling  | CSS3 (custom properties, Grid, Flexbox) |
-| Scripting| Vanilla JavaScript (ES6+)      |
-| Fonts    | Google Fonts (DM Serif Display + Inter) |
-
-No frameworks, no build tools, no dependencies — just plain files.
+| Layer | Technology |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 (Custom Properties, Grid, Flexbox) |
+| Scripting | Vanilla JavaScript (ES6+) |
+| Animations | AOS Library v2.3.4 |
+| Icons | Devicons CDN |
+| Fonts | Google Fonts (Playfair Display + Space Grotesk) |
 
 ---
 
-## Project Structure
+## File Structure
 
 ```
 portfolio/
-├── index.html   # Main page (hero, about, skills, projects, contact)
-├── style.css    # All styles (tokens, layout, components, responsive)
-├── script.js    # Typewriter, scroll reveal, nav, contact form
-└── README.md    # This file
+├── index.html      # Full single-page HTML
+├── style.css       # All styles (tokens, layout, components, responsive)
+├── script.js       # All JS (loader, particles, typewriter, scroll spy, form)
+├── resume.pdf      # ← ADD YOUR RESUME HERE
+└── README.md       # This file
 ```
 
 ---
 
 ## Setup & Running Locally
 
-No build step required.
+No build step required — just open the file.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/<your-username>/<your-repo>.git
-   cd <your-repo>
-   ```
-
-2. **Open in browser**
-   - Double-click `index.html`, or
-   - Use VS Code's **Live Server** extension for hot reload:
-     ```
-     Right-click index.html → Open with Live Server
-     ```
-
-That's it — no npm, no installs.
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+# Open index.html in browser, or use VS Code Live Server
+```
 
 ---
 
 ## Deployment
 
-### Option 1 — GitHub Pages (recommended, free)
+### GitHub Pages (Recommended)
+1. Push files to a GitHub repository
+2. Go to **Settings → Pages → Source: main branch / root**
+3. Save → live at `https://<username>.github.io/<repo>/`
 
-1. Push all files to a GitHub repository.
-2. Go to **Settings → Pages**.
-3. Under **Source**, select `main` branch and `/root`.
-4. Click **Save**. GitHub will provide a URL: `https://<username>.github.io/<repo>/`
-
-### Option 2 — Netlify (drag & drop)
-
-1. Go to [netlify.com](https://netlify.com) and sign up.
-2. Drag the entire `portfolio/` folder onto the Netlify dashboard.
-3. Your site is live instantly with a `*.netlify.app` URL.
-4. Optionally connect a custom domain.
-
-### Option 3 — Vercel
-
-1. Install the Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project folder and follow the prompts.
+### Netlify (Drag & Drop)
+1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
+2. Drag the `portfolio/` folder onto the page
+3. Instant live URL
 
 ---
 
 ## Customisation Checklist
 
-Before publishing, update these placeholders:
+Before publishing, update these in `index.html`:
 
-- [ ] Replace `href="#"` GitHub links in project cards with real repo URLs
-- [ ] Add your GitHub username in the contact section
-- [ ] Update the "More coming soon" card as you complete more projects
-- [ ] (Optional) Replace the `mailto:` contact form with a service like [Formspree](https://formspree.io) for server-side email delivery
-
----
-
-## License
-
-This project is open source under the [MIT License](LICENSE).
+- [ ] Add your **profile photo** — replace the `about-img-placeholder` div with an `<img>` tag
+- [ ] Add your **resume PDF** — place `resume.pdf` in the project folder
+- [ ] Update **GitHub** username/link in hero socials and contact section
+- [ ] Update **Instagram** link
+- [ ] Replace `href="#"` in project cards with real GitHub/demo URLs
+- [ ] Add more projects as you complete Future Interns tasks
+- [ ] (Optional) Replace the `mailto:` form with [Formspree](https://formspree.io) for server-side delivery
 
 ---
 
-*Built for the Future Interns Full Stack Web Development Internship – 2026*
+## Photo Setup
+
+Replace the placeholder in `index.html`:
+
+```html
+<!-- Find this div: -->
+<div class="about-img-placeholder">
+  <span>SR</span>
+  <p class="img-hint">Replace with your photo</p>
+</div>
+
+<!-- Replace with: -->
+<img src="photo.jpg" alt="Sathwika Reddy" class="about-photo" />
+```
+
+And add to `style.css`:
+```css
+.about-photo {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  margin: 0 auto;
+  display: block;
+}
+```
+
+---
+
+*Built for the Future Interns Full Stack Web Development Internship — 2026*
